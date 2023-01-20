@@ -23,7 +23,7 @@
         </div>
         <div class="form-group">
             <label for="delivery_location_id">Delivery Location</label>
-            <select class="form-control selectpicker" id="delivery_location_id" name="delivery_location_id" >
+            <select class="form-control selectpicker" id="delivery_location_id" name="delivery_location_id" multiple>
                 @foreach($deliveryLocations as $deliveryLocation)
                 <option value="{{ $deliveryLocation->id }}" {{ in_array($deliveryLocation->id, old('delivery_location_id', [])) ? 'selected' : '' }}>{{ $deliveryLocation->location }}</option>
                 @endforeach
